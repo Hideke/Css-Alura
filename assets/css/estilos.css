@@ -6,7 +6,7 @@
 body {
     background-color: #1D232A;
     font-family: 'Open Sans', 'icones', sans-serif;
-    color: #ffffff
+    color: #FFFFFF;
 }
 
 .cabecalho {
@@ -23,7 +23,7 @@ body {
     font-size: 24px;
 }
 
-.cabecalho__notificacao::before {
+.cabecalho__notificacao i::before {
     content: "\e906";
     font-size: 24px;
 }
@@ -36,12 +36,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #15191C;
-    width: 72vw;
+    width: 75vw;
     height: 100vh;
+
     position: absolute;
     left: -100vw;
     transition: .25s;
-    z-index: 99;
 }
 
 .menu-lateral--ativo {
@@ -64,13 +64,13 @@ body {
 }
 
 .menu-lateral__link--ativo {
-    color: #ffffff;
+    color: #FFFFFF;
     padding-left: 56px;
-    border-left: 8px solid #ffffff;
+    border-left: 8px solid #FFFFFF;
 }
 
 .menu-lateral__link::before {
-    content: "\e902";
+    content: "\e900";
     width: 24px;
     height: 24px;
     font-size: 24px;
@@ -78,7 +78,7 @@ body {
     left: 24px;
 }
 
-.menu-lateral__link--inicio {
+.menu-lateral__link--inicio::before {
     content: "\e902";
 }
 
@@ -104,10 +104,17 @@ body {
 
 .principal {
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .titulo-pagina {
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.titulo-secao {
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -118,17 +125,22 @@ body {
     background-color: #2C343A;
 }
 
+.cartao--destaque {
+    margin-bottom: 16px;
+}
+
 .cartao__conteudo {
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
 }
 
 .cartao__destaque {
     grid-column: span 2;
 }
 
-.cartão__titulo {
+.cartao__titulo {
     font-size: 1.2rem;
     font-weight: 700;
     grid-column: span 2;
@@ -137,7 +149,7 @@ body {
 .cartao__perfil {
     color: #95999C;
     font-size: 0.9rem;
-    grid-column: span 2; 
+    grid-column: span 2;
 }
 
 .cartao__info {
@@ -148,12 +160,12 @@ body {
 
 .cartao__info--tempo::before {
     content: "\e90c";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
 
 .cartao__info--visualizacao::before {
     content: "\e90f";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
 
 .cartao__botao {
@@ -161,10 +173,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #0480DC;
-    width: 40p;
+    width: 40px;
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
 }
 
 .cartao__botao--play::before {
@@ -179,4 +192,9 @@ body {
 
 .cartao__botao--destaque::before {
     margin-right: 8px;
+}
+
+.secao {
+    display: grid;
+    gap: 16px;
 }
